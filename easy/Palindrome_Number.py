@@ -4,16 +4,11 @@
 # @File    : Palindrome_Number.py
 # @Software: PyCharm
 
-def reverse(x):
-    """
-    :type x: int
-    :rtype: int
-    """
+# 其实类似的-212负数抛弃掉符号都是回文，定义规则不一样而已
+def isPlindrome(x):
+
+    if x<0:
+        return  False
     s = cmp(x, 0)
     r = int(`s * x`[::-1])
-    return s * r * (r < 2 ** 31)
-    def isPalindrome(self, x):
-        """
-        :type x: int
-        :rtype: bool
-        """
+    return s * r * (r < 2 ** 31)==x
